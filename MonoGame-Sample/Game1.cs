@@ -21,6 +21,7 @@ namespace MonoGame_Sample
             // TODO: Add your initialization logic here
 
             base.Initialize();
+
         }
 
         protected override void LoadContent()
