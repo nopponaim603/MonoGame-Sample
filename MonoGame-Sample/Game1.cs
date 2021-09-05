@@ -10,7 +10,7 @@ namespace MonoGame_Sample
         private SpriteBatch _spriteBatch;
 
         Texture2D myTexture;
-        Vector2 spritePosition = Vector2.Zero;
+        Vector2 bgPosition = Vector2.Zero;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -50,7 +50,7 @@ namespace MonoGame_Sample
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-            _spriteBatch.Draw(myTexture, spritePosition, Color.White);
+            _spriteBatch.Draw(myTexture, bgPosition, Color.White);
             _spriteBatch.End();
             base.Draw(gameTime);
         }
