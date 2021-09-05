@@ -8,7 +8,8 @@ namespace MonoGame_Sample
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
+        Texture2D myTexture;
+        Vector2 spritePosition = Vector2.Zero;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
