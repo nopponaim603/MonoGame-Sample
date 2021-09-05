@@ -8,6 +8,7 @@ namespace MonoGame_Sample
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
         Texture2D myTexture;
         Vector2 spritePosition = Vector2.Zero;
         public Game1()
@@ -22,7 +23,7 @@ namespace MonoGame_Sample
             // TODO: Add your initialization logic here
 
             base.Initialize();
-
+            myTexture = Content.Load<Texture2D>("bgCloud");
 
         }
 
@@ -48,7 +49,9 @@ namespace MonoGame_Sample
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            _spriteBatch.Begin();
+            _spriteBatch.Draw(myTexture, spritePosition, Color.White);
+            _spriteBatch.End();
             base.Draw(gameTime);
         }
     }
