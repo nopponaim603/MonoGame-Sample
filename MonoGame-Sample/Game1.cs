@@ -2,9 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using MonoGame.Extended.Tiled;
-using MonoGame.Extended.Tiled.Renderers;
-
 namespace MonoGame_Sample
 {
     public class Game1 : Game
@@ -15,8 +12,6 @@ namespace MonoGame_Sample
         Texture2D myTexture;
         Vector2 myBGPosition;
 
-        TiledMap _tiledMap;
-        TiledMapRenderer _tiledMapRenderer;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -40,9 +35,6 @@ namespace MonoGame_Sample
 
         protected override void LoadContent()
         {
-            _tiledMap = Content.Load<TiledMap>("Level");
-            _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
-
 
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -55,7 +47,7 @@ namespace MonoGame_Sample
                 Exit();
 
             // TODO: Add your update logic here
-            _tiledMapRenderer.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -66,7 +58,7 @@ namespace MonoGame_Sample
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
             _spriteBatch.Draw(myTexture, myBGPosition, Color.White);
-            _tiledMapRenderer.Draw();
+
             _spriteBatch.End();
             base.Draw(gameTime);
         }
