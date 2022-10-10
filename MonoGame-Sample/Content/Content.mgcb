@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:C:\Users\DELL\.nuget\packages\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -36,4 +37,14 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:firefoxBall.png
+
+#begin Level.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:Level.tmx
+
+#begin Platform_Tileset.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:Platform_Tileset.tsx
 
