@@ -11,6 +11,8 @@ namespace MonoGame_Sample
 
         Texture2D myTexture;
         Vector2 myBGPosition;
+        // Change stage1
+
         ///
         //Add int
         int position;
