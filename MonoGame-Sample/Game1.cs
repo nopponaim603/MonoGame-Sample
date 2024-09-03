@@ -11,6 +11,7 @@ namespace MonoGame_Sample
 
         Texture2D myTexture;
         Vector2 myBGPosition;
+        ///
         //Add int
         int position;
         public Game1()
